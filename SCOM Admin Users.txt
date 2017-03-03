@@ -1,0 +1,16 @@
+SCOM Server Action Account:
+===========================
+
+New-ADUser -Name "OMAA" -GivenName SCOM -Surname AA -SamAccountName omaa -UserPrincipalName omaa@<domain.xxx> -AccountPassword (ConvertTo-SecureString “password” -AsPlainText -Force) -PassThru  | Enable-ADAccount
+
+SCOM Data Access Account:
+=========================
+
+New-ADUser -Name "OMDAS" -GivenName SCOM -Surname DA -SamAccountName omda -UserPrincipalName omda@<domain.xxx> -AccountPassword (ConvertTo-SecureString “password” -AsPlainText -Force) -PassThru | Enable-ADAccount
+
+SCOM OMS Account:
+=================
+
+New-ADUser -Name "OMOMS" -GivenName SCOM -Surname OMS -SamAccountName omoms -UserPrincipalName scom_oms@<domain.xxx> -AccountPassword (ConvertTo-SecureString “password” -AsPlainText -Force) -PassThru | Enable-ADAccount
+
+

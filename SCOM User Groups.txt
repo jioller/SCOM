@@ -1,0 +1,19 @@
+Admins: 
+=======
+
+New-ADGroup SCOMADMINS  -GroupScope Global -GroupCategory Security
+
+Add-ADGroupMember SCOM_ADMINS -Members omaa
+
+Add-ADGroupMember SCOM_ADMINS -Members omda
+
+Add-ADGroupMember SCOM_ADMINS -Members omoms
+
+SQL:
+====
+
+New-ADGroup SCOMSQL  -GroupScope Global -GroupCategory Security
+
+Add-ADGroupMember SCOM_ADMINS -Members omread
+
+Add-ADGroupMember SCOM_ADMINS -Members omwrite

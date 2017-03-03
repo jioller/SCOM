@@ -1,0 +1,9 @@
+SCOM SQL READ Account:
+======================
+
+New-ADUser -Name "OMREAD" -GivenName SCOM -Surname READ SQL -SamAccountName omread -UserPrincipalName omread@<domain.xxx> -AccountPassword (ConvertTo-SecureString “password” -AsPlainText -Force) -PassThru | Enable-ADAccount
+
+SCOM SQL WRITE Account:
+=======================
+
+New-ADUser -Name "OMWRITE" -GivenName SCOM -Surname WRITE SQL -SamAccountName omwrite -UserPrincipalName omwrite@<domain.xxx> -AccountPassword (ConvertTo-SecureString “password” -AsPlainText -Force) -PassThru | Enable-ADAccount
